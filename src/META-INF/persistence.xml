@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="my-task-PU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>org.ftd.educational.mytask.persistence.entities.AbstractEntity</class>
+    <class>org.ftd.educational.mytask.persistence.entities.ConfigKey</class>
+    <class>org.ftd.educational.mytask.persistence.entities.Rule</class>
+    <class>org.ftd.educational.mytask.persistence.entities.User</class>
+    <class>org.ftd.educational.mytask.persistence.entities.Passwd</class>
+    <class>org.ftd.educational.mytask.persistence.entities.UserStatus</class>
+    <class>org.ftd.educational.mytask.persistence.entities.Log</class>
+    <class>org.ftd.educational.mytask.persistence.entities.ProjectGroup</class>
+    <class>org.ftd.educational.mytask.persistence.entities.ProjectStatus</class>
+    <class>org.ftd.educational.mytask.persistence.entities.ProjectPhase</class>
+    <class>org.ftd.educational.mytask.persistence.entities.ProjectType</class>
+    <class>org.ftd.educational.mytask.persistence.entities.CompanyArea</class>
+    <class>org.ftd.educational.mytask.persistence.entities.StakeholderGroup</class>
+    <class>org.ftd.educational.mytask.persistence.entities.BacklogItemStatus</class>
+    <class>org.ftd.educational.mytask.persistence.entities.Stakeholder</class>
+    <class>org.ftd.educational.mytask.persistence.entities.BacklogItem</class>
+    <class>org.ftd.educational.mytask.persistence.entities.Company</class>
+    <properties>
+        <!--
+        <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/taskmng?zeroDateTimeBehavior=convertToNull"/>
+        -->
+  <property name="javax.persistence.jdbc.url" value="jdbc:mysql://ftd-mysql.mysql.database.azure.com:3306/taskmng?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.user" value="ftd@ftd-mysql"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="GalateoMenino2018#"/>
+      <!-- EclipseLink should create the database schema automatically -->
+      <property name="eclipselink.ddl-generation" value="create-tables"/>
+      <property name="eclipselink.logging.level" value="WARNING"/>
+    </properties>
+  </persistence-unit>
+</persistence>
